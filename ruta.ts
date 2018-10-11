@@ -5,7 +5,7 @@ const s = http.createServer(
     (req: http.IncomingMessage, res: http.ServerResponse) => {
         if (req.url === "/") {
             res.writeHead(200, { "content-type": "text/plain" })
-            res.end("Bienvenido")
+            res.end("Bienvenido al servido ;)")
         }
     }
 )
