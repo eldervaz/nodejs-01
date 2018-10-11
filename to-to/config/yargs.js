@@ -20,6 +20,19 @@ const argv = require ("yargs")
         }
     })
 
+    .command("getList", "listar tareas", {
+        descripcion:{
+            demand:true,
+            alias: "l",
+            desc: "descripción de la tarea"
+        },
+        completado:{
+            default: true,
+            alias: "c",
+            desc: "Tarea completada"
+        }
+    })
+
     .help()
     .argv;
 

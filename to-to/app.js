@@ -10,11 +10,12 @@ const toDo = require ("./to-do/to-do")
     case "create":
         //console.log("crear tarea")
         let tarea = toDo.create(argv.descripcion);
-        console.log(tarea)
+        //console.log(tarea)
         break
 
     case "list":
-        console.log("listar tareas")
+        //console.log("listar tareas")
+        let list = toDo.getList();
         break
 
     case "update":

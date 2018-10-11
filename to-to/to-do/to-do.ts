@@ -18,7 +18,12 @@ const loadData = () => {
 
 const create =  (descripcion)=>{
 
-    loadData()
+    try {
+        loadData()    
+    } catch (error) {
+        list = []
+    }
+    
 
     let toDo = {
         descripcion,
@@ -30,6 +35,10 @@ const create =  (descripcion)=>{
     return toDo;
 }
 
+const getList = ()=>{
+    console.log("call getList")
+}
+
 module.exports = {
-    create
+    create, getList
 }
