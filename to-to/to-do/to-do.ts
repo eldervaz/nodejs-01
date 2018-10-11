@@ -55,8 +55,20 @@ const update = (descripcion, completado = true)=>{
     }
 }
 
-const remove = ()=>{
+const remove = (descripcion)=>{
     loadData();
+
+    let newList = list.filter( tarea => tarea.descripcion !== descripcion)
+
+    if(newList.length == list.length){
+        //no hubieron cambios
+        return false
+    }else{
+        list = newList;
+        saveData();
+        return true;
+    }
+
     return "removiendo";
 }
 
