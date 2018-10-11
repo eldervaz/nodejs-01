@@ -9,6 +9,7 @@ const s = http.createServer(
             res.end("<p>Estamos para servirte</p>")
         }else{
             res.writeHead(200, { "content-type": "text/html" })
+            res.write("<head><meta charset='UTF-8'></head>")
             res.write("<h1>¿estás perdido?</h1>")
             res.end("<p>Esta página no está disponible</p>")
         }
