@@ -12,7 +12,13 @@ const saveData = ()=>{
 
 }
 
+const loadData = () => {
+    list = require("../db/data.json")
+}
+
 const create =  (descripcion)=>{
+
+    loadData()
 
     let toDo = {
         descripcion,
