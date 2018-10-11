@@ -6,8 +6,16 @@ const s = http.createServer(
         if (req.url === "/") {
             res.writeHead(200, { "content-type": "text/html" })
             res.write("<h1>Bienvenido al servido ;)</h1>")
+            res.write("<a href='/login'>ir al Login</a>");
             res.end("<p>Estamos para servirte</p>")
-        }else{
+        }
+        else if (req.url === "/login") {
+            res.writeHead(200, { "content-type": "text/html" })
+            res.write("<head><meta charset='UTF-8'></head>")
+            res.write("<h1>Login</h1>")
+            res.end("<p>Ingresa tu usuario y password</p>")
+        }
+        else{
             res.writeHead(200, { "content-type": "text/html" })
             res.write("<head><meta charset='UTF-8'></head>")
             res.write("<h1>¿estás perdido?</h1>")
