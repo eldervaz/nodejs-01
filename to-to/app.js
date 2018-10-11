@@ -2,7 +2,9 @@
 
 const argv = require ("./config/yargs").argv
 
- console.log(argv)
+//console.log(argv)
+
+const toDo = require ("./to-do/to-do")
 
 
  let comando = argv._[0]
@@ -10,7 +12,9 @@ const argv = require ("./config/yargs").argv
  switch(comando){
 
     case "create":
-        console.log("crear tarea")
+        //console.log("crear tarea")
+        let toDo = toDo.create(argv.descripcion  );
+        console.log(toDo)
         break
 
     case "list":
@@ -18,7 +22,7 @@ const argv = require ("./config/yargs").argv
         break
 
     case "update":
-        console.log("crear")
+        console.log("update")
         break
 
         default:
