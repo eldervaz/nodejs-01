@@ -1,9 +1,10 @@
 const fs = require("fs")
 
 const lectura = fs.createReadStream("./file.txt", "utf8")
+const escritura = fs.createWriteStream("./nuevo.txt")
 
 lectura.on("data", chunk => {
-	lectura.write(chunk)
+	escritura.write(chunk)
 })
 
 lectura.on("end", () => {
@@ -11,7 +12,7 @@ lectura.on("end", () => {
 })
 
 /*
-const escritura = fs.createWriteStream("./nuevo.txt")
+
 
 var data = "Hello, World!\n";
 escritura.write(data, function() {
