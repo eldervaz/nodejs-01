@@ -15,16 +15,21 @@ const colors = require("colors")
         let list = toDo.getList();
 
         for (let tarea of list){
-            console.log ("========================".green)
+            console.log ("===========  TAREA  ============".green)
             console.log( "Tarea: " ,tarea.descripcion );
             console.log( "Estado: " , tarea.completado );
-            console.log ("========================".green)
+            console.log ("================================".green)
         }
         break
 
     case "update":
         let update = toDo.update(argv.descripcion, argv.completado);
         console.log(update);
+        break
+
+    case "remove":
+        let remove = toDo.remove(argv.descripcion);
+        console.log(remove);
         break
 
         default:

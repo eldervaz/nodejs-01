@@ -25,11 +25,14 @@ const argv = require ("yargs")
             demand:false,
             alias: "l",
             desc: "descripción de la tarea"
-        },
-        completado:{
-            default: false,
-            alias: "c",
-            desc: "Tarea completada"
+        }
+    })
+
+    .command("remove", "Eliminar tareas", {
+        descripcion:{
+            demand:false,
+            alias: "l",
+            desc: "descripción de la tarea"
         }
     })
 

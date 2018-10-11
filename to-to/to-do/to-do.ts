@@ -53,10 +53,13 @@ const update = (descripcion, completado = true)=>{
     }else{
         return false;
     }
+}
 
-
+const remove = ()=>{
+    loadData();
+    return "removiendo";
 }
 
 module.exports = {
-    create, getList, update
+    create, getList, update, remove
 }
