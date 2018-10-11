@@ -6,7 +6,7 @@ const saveData = ()=>{
 
     let data = JSON.stringify(list);
 
-    fs.write("db/data.json", data, (error)=>{
+    fs.writeFile("db/data.json", data, (error)=>{
         if(error)throw new Error(error)
     })
 

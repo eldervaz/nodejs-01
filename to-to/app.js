@@ -9,7 +9,7 @@ const toDo = require ("./to-do/to-do")
 
     case "create":
         //console.log("crear tarea")
-        let tarea = toDo.create(argv.descripcion  );
+        let tarea = toDo.create(argv.descripcion);
         console.log(tarea)
         break
 
