@@ -22,12 +22,12 @@ const argv = require ("yargs")
 
     .command("getList", "listar tareas", {
         descripcion:{
-            demand:true,
+            demand:false,
             alias: "l",
             desc: "descripción de la tarea"
         },
         completado:{
-            default: true,
+            default: false,
             alias: "c",
             desc: "Tarea completada"
         }

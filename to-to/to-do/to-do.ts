@@ -45,9 +45,7 @@ const update = (descripcion, completado = true)=>{
 
     loadData();
 
-    let index = list.findIndex( tarea =>{
-        return tarea.descripcion === descripcion;
-    })
+    let index = list.findIndex( tarea => tarea.descripcion === descripcion)
 
     if(index >=0){
         list[index].completado = completado;
