@@ -59,6 +59,8 @@ const remove = (descripcion)=>{
     loadData();
 
     let newList = list.filter( tarea => {
+
+        console.log(tarea.descripcion , descripcion)
         return tarea.descripcion !== descripcion
     })
 
