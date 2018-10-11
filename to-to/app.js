@@ -15,7 +15,10 @@ const toDo = require ("./to-do/to-do")
         let list = toDo.getList();
 
         for (let tarea of list){
-            console.log( tarea);
+            console.log ("========================".green)
+            console.log( "Tarea: " ,tarea.descripcion );
+            console.log( "Estado: " , tarea.completado );
+            console.log ("========================".green)
         }
         break
 

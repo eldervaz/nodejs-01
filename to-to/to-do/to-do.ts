@@ -37,6 +37,7 @@ const create =  (descripcion)=>{
 
 const getList = ()=>{
     //console.log("call getList")
+    loadData();
     return list;
 }
 
