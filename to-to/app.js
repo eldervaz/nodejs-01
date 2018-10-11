@@ -13,8 +13,8 @@ const toDo = require ("./to-do/to-do")
 
     case "create":
         //console.log("crear tarea")
-        let toDo = toDo.create(argv.descripcion  );
-        console.log(toDo)
+        let tarea = toDo.create(argv.descripcion  );
+        console.log(tarea)
         break
 
     case "list":
