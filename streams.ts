@@ -1,5 +1,8 @@
 const fs = require("fs")
 
-const texto = fs.readFileSync("./file.txt",{encoding:"utf8"})
+const lectura = fs.createReadStream("./file.txt", "utf8")
 
-console.log(texto)
+const escritura = fs.createWriteStream("./nuevo.txt")
+
+lectura.pipe(escritura)
+
