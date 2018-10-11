@@ -41,6 +41,25 @@ const getList = ()=>{
     return list;
 }
 
+const update = (descripcion, completado = true)=>{
+
+    loadData();
+
+    let index = list.findIndex( tarea =>{
+        return tarea.descripcion === descripcion;
+    })
+
+    if(index >=0){
+        list[index].completado = completado;
+        saveData();
+        return true
+    }else{
+        return false;
+    }
+
+
+}
+
 module.exports = {
-    create, getList
+    create, getList, update
 }

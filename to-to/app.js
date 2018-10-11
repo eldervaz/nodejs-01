@@ -23,7 +23,8 @@ const colors = require("colors")
         break
 
     case "update":
-        console.log("update")
+        let update = toDo.update(argv.descripcion, argv.completado);
+        console.log(update);
         break
 
         default:
