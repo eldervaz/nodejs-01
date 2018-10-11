@@ -6,6 +6,7 @@ const escritura = fs.createWriteStream("./nuevo.txt")
 lectura.on("data", chunk => {
     escritura.write(chunk)
     escritura.write("Hola Mundo \n")
+    escritura.write("Esta es una prueba \n")
 })
 
 lectura.on("end", () => {
@@ -13,13 +14,5 @@ lectura.on("end", () => {
 })
 
 /*
-
-
-var data = "Hello, World!\n";
-escritura.write(data, function() {
-  // Now the data has been written.
-  console.log("update file");
-});
-
 lectura.pipe(escritura)
 */
