@@ -60,6 +60,8 @@ const remove = (descripcion)=>{
 
     let newList = list.filter( tarea => tarea.descripcion !== descripcion)
 
+    console.log(newList.length , list.length)
+
     if(newList.length === list.length){
         //no hubieron cambios
         return false
