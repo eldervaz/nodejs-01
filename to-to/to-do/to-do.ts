@@ -36,7 +36,6 @@ const create =  (descripcion)=>{
 }
 
 const getList = ()=>{
-    //console.log("call getList")
     loadData();
     return list;
 }
@@ -47,7 +46,7 @@ const update = (descripcion, completado = true)=>{
 
     let index = list.findIndex( tarea => tarea.descripcion === descripcion)
 
-    if(index >=0){
+    if(index >= 0){
         list[index].completado = completado;
         saveData();
         return true
