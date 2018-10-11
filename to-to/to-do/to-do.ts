@@ -1,6 +1,6 @@
 const fs = require("fs")
 
-let list = []
+let list:any = []
 
 const saveData = ()=>{
 
