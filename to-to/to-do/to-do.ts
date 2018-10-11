@@ -58,7 +58,9 @@ const update = (descripcion, completado = true)=>{
 const remove = (descripcion)=>{
     loadData();
 
-    let newList = list.filter( tarea => tarea.descripcion !== descripcion)
+    let newList = list.filter( tarea => {
+        return tarea.descripcion !== descripcion
+    })
 
     console.log(newList.length , list.length)
 
