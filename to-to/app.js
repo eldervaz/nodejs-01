@@ -8,14 +8,15 @@ const toDo = require ("./to-do/to-do")
  switch(comando){
 
     case "create":
-        //console.log("crear tarea")
         let tarea = toDo.create(argv.descripcion);
-        //console.log(tarea)
         break
 
-    case "list":
-        //console.log("listar tareas")
+    case "getList":
         let list = toDo.getList();
+
+        for (let tarea of list){
+            console.log( tarea);
+        }
         break
 
     case "update":

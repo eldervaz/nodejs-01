@@ -36,7 +36,8 @@ const create =  (descripcion)=>{
 }
 
 const getList = ()=>{
-    console.log("call getList")
+    //console.log("call getList")
+    return list;
 }
 
 module.exports = {
