@@ -1,6 +1,6 @@
 //const argv = require ("yargs").argv
 
-const argv = require (" ./config/yargs").argv
+const argv = require ("./config/yargs").argv
 
  console.log(argv)
 
