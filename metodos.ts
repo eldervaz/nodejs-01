@@ -20,10 +20,10 @@ const servidor = http.createServer((req:http.IncomingMessage, res:http.ServerRes
         if(ruta == "/usuarios"){
             if( metodo == "get"){
                 res.writeHead(200, {"content-type":"application/json"})
-                res.end([
+                res.end(JSON.stringify([
                     {nombre:"user1", apellido:"p1"},
                     {nombre:"user2", apellido:"p2"}
-                ])
+                ]))
             }
 
             if( metodo == "post"){
