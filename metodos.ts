@@ -13,7 +13,7 @@ const servidor = http.createServer((req:http.IncomingMessage, res:http.ServerRes
 
     const metodo = req.method.toLocaleLowerCase()
 
-    if(metodosValidos(req.method)){
+    if(metodosValidos(metodo)){
 
         const ruta = req.url.toLocaleLowerCase()
 
