@@ -4,7 +4,7 @@ import http = require("http")
 const metodosValidos = (metodo):boolean => {
     const metodos = ["get", "post", "put", "delete"]
 
-    if(metodos.indexOf(metodo.toLowerCase() )) return true
+    if(metodos.indexOf(metodo.toLowerCase() ) > -1 ) return true
 
     return false
 }
