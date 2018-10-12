@@ -1,0 +1,7 @@
+{
+    "watch":[
+        "metodos.ts"
+    ],
+    "ext":"ts",
+    "exec": "ts-node metodos"
+}
