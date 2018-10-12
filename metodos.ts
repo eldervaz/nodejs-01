@@ -11,7 +11,7 @@ const metodosValidos = (metodo):boolean => {
 
 const servidor = http.createServer((req:http.IncomingMessage, res:http.ServerResponse)=>{
 
-        const metodo = req.method.toLocaleLowerCase()
+    const metodo = req.method.toLocaleLowerCase()
 
     if(metodosValidos(req.method)){
 
@@ -42,6 +42,9 @@ const servidor = http.createServer((req:http.IncomingMessage, res:http.ServerRes
             }
 
 
+        }else{
+            res.writeHead(404, {"content-type":"text/plain"})
+            res.end("Ruta no encontrada")
         }
         
 
